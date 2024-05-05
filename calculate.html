@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carbon Footprint Calculation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Carbon Footprint Calculation</h2>
+
+      <h3>Transportation</h3>
+      <label for="car-mileage">Car Mileage (km/liter):</label>
+      <input type="number" id="car-mileage" required />
+      <label for="daily-commute">Daily Commute (km):</label>
+      <input type="number" id="daily-commute" required />
+      <label for="commute-frequency">Commute Frequency (days/week):</label>
+      <input type="number" id="commute-frequency" required />
+      <select id="engine-capacity">
+        <option value="NaN" disabled selected>Select Engine Capacity</option>
+        <option value="lessThan1500">Engine Capacity (< 1500cc)</option>
+        <option value="moreThan1500">Engine Capacity (> 1500cc)</option>
+        <option value="scootyBike">Scooty/Bike</option>
+      </select>
+
+      <h3>Energy</h3>
+      <label for="electricity-usage">Electricity Usage (kWh/month):</label>
+      <input type="number" id="electricity-usage" required />
+      <label for="gas-usage">Gas Usage (m³):</label>
+      <input type="number" id="gas-usage" required />
+
+      <h3>Other</h3>
+      <label for="flights">Number of Flights (per year):</label>
+      <input type="number" id="flights" required />
+      <label for="meat-consumption">Meat Consumption (kg/year):</label>
+      <input type="number" id="meat-consumption" required />
+
+      <label for="trees-planted">Number of Trees Planted (optional):</label>
+      <input type="number" id="trees-planted" />
+
+      <button style="margin-top: 10px" id="calculate-button" class="button-41">
+        Calculate Footprint
+      </button>
+
+      <p id="footprint-result"></p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
